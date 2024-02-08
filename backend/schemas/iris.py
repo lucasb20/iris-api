@@ -7,4 +7,4 @@ class IrisFeatures(Schema):
     Petal_Width = fields.Float(required=True)
 
 class IrisPredict(IrisFeatures):
-    Species = fields.Float()
+    Specie = fields.String()
