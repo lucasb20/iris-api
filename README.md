@@ -3,7 +3,7 @@ Uma API em Flask consumindo um modelo de rede neural.
 
 **Descrição**
 
- Esse é um projeto de API em Flask utilizada para se comunicar com um modelo de rede neural de posição de jogo da velha, que classifica o jogo em ganho para X, empatado ou ganho para O.
+ Esse é um projeto de API em Flask utilizada para se comunicar com um modelo de rede neural para classificar tipos de flores do dataset iris, da biblioteca scikit-learn, classificando em Iris Setosa, Versicolour ou Virginica com base nas features.
 
 **Objetivos**
 
