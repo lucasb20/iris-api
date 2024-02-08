@@ -3,7 +3,7 @@ A Flask API consuming a neural network model.
 
 **Description**
 
-  This is an API project in Flask used to communicate with a neural network model to classify types of flowers from the iris dataset, from the scikit-learn library, classifying into Iris Setosa, Versicolour or Virginica based on the features.
+  This is an API project in Flask used to communicate with a neural network model to classify types of flowers from the iris dataset, from the scikit-learn library, classifying into Iris Setosa, Versicolor or Virginica.
 
 **Installation instructions**
 
@@ -16,5 +16,32 @@ A Flask API consuming a neural network model.
 **Screenshots**
 
 * Training the neural network.
+
 ![Training the neural network](other/Screenshot1.png)
 
+* Response on `POST /iris {
+	"Petal_Length": 0.2,
+	"Petal_Width": 1.4,
+	"Sepal_Length": 5.1,
+	"Sepal_Width": 3.5
+}`
+
+![Testing ENDPOINT /iris](other/Screenshot2.png)
+
+* Response on `POST /iris {
+	"Petal_Length": 4.7,
+	"Petal_Width": 1.4,
+	"Sepal_Length": 7.0,
+	"Sepal_Width": 3.2
+}`
+
+![Testing ENDPOINT /iris](other/Screenshot3.png)
+
+* Response on `POST /iris {
+	"Petal_Length": 6.0,
+	"Petal_Width": 1.4,
+	"Sepal_Length": 6.3,
+	"Sepal_Width": 3.3
+}`
+
+![Testing ENDPOINT /iris](other/Screenshot4.png)
