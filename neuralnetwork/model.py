@@ -12,6 +12,11 @@ x_train, x_test, y_train, y_test = train_test_split(x_features, y_labels, test_s
 
 mlp = MLPClassifier()
 mlp.fit(x_train, y_train)
-print(mlp.score(x_test, y_test))
+
+print("x_test:")
+print(x_test)
+print("y_test:")
+print(y_test)
+print("Acurracy: " + str(mlp.score(x_test, y_test)))
 
 s = dump(mlp, "model.joblib")

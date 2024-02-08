@@ -1,22 +1,18 @@
 # neural-network-api
-Uma API em Flask consumindo um modelo de rede neural.
+A Flask API consuming a neural network model.
 
-**Descrição**
+**Description**
 
- Esse é um projeto de API em Flask utilizada para se comunicar com um modelo de rede neural para classificar tipos de flores do dataset iris, da biblioteca scikit-learn, classificando em Iris Setosa, Versicolour ou Virginica com base nas features.
+  This is an API project in Flask used to communicate with a neural network model to classify types of flowers from the iris dataset, from the scikit-learn library, classifying into Iris Setosa, Versicolour or Virginica based on the features.
 
-**Objetivos**
+**Installation instructions**
 
-O objetivo é mais para eu aprender a fazer doploy de modelo de Machine Learning.
+**Application installation**
 
-**Instruções de instalação**
-
-**Instalação do aplicativo**
-
-1. Entre na pasta da API
-2. Execute `pip install -r requirements.txt` para instalar as dependência,
+1. Enter the API folder
+2. Run `pip install -r requirements.txt` to install the dependencies,
 
 **Screenshots**
 
-* AAAA
-![Screenshot](other/Screenshot_1.png)
+* YYYY
+![Screenshot](other/Screenshot1.png)
