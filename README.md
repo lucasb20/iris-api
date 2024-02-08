@@ -9,10 +9,12 @@ A Flask API consuming a neural network model.
 
 **Application installation**
 
-1. Enter the API folder
-2. Run `pip install -r requirements.txt` to install the dependencies,
+1. Enter the Backend folder
+2. Run `pip install -r requirements.txt` to install the dependencies
+3. Run `flask run` to run API.
 
 **Screenshots**
 
-* YYYY
-![Screenshot](other/Screenshot1.png)
+* Training the neural network.
+![Training the neural network](other/Screenshot1.png)
+

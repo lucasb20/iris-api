@@ -1,1 +1,1 @@
-from iris import IrisFeatures, IrisPredict
+from backend.schemas.iris import IrisFeatures, IrisPredict

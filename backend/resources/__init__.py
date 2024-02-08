@@ -1,1 +1,1 @@
-from mlp import bp as MlpBlueprint
+from backend.resources.mlp import bp as MlpBlueprint
