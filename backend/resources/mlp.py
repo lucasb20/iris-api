@@ -15,9 +15,9 @@ class Iris(MethodView):
         predict_str = ""
         if(predict == 0):
             predict_str = "setosa" 
-        if(predict == 1):
+        elif(predict == 1):
             predict_str = "versicolor"
-        if(predict == 2):
+        else:
             predict_str = "virginica"
 
         return {**features, 'Specie': predict_str}
