@@ -9,7 +9,7 @@ A Flask API consuming a neural network model.
 
 **Installation instructions**
 
-**SYSTEM REQUIREMENTS**
+**System requirements**
 
 * Python 3.10
 
