@@ -1,7 +1,7 @@
 from flask.views import MethodView
-from flask_smorest import Blueprint
+from flask import Blueprint
 from joblib import load
-from backend.schemas import IrisFeatures, IrisPredict
+from schemas import IrisFeatures, IrisPredict
 
 bp = Blueprint("mlp", __name__, description="Operations on mlp")
 
