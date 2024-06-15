@@ -12,11 +12,11 @@ label_name = sess.get_outputs()[0].name
 def predict():
     data = request.get_json()
     if 'features' not in data or not isinstance(data['features'], list) or len(data['features']) != 4:
-        return jsonify({'message': 'invalid features field'}), 404
+        return jsonify({'message': 'invalid features field.'}), 404
 
     data = np.array([data['features']], dtype=np.float32)
 
     pred_onx = sess.run([label_name], {input_name: data})[0]
-    predict_str = ["setosa", "versicolor", "virginica"][pred_onx[0]]
+    predict_str = ["iris-setosa", "iris-versicolour", "iris-virginica"][pred_onx[0]]
 
-    return {'predict': predict_str}
+    return jsonify({'predict': predict_str})
