@@ -1,17 +1,22 @@
-from flask import Blueprint
+from flask import Blueprint, request, jsonify
+import onnxruntime as rt
+import numpy as np
 
 bp = Blueprint("Predict", __name__, url_prefix="/predict")
 
-@bp.route("/", methods=['POST'])
-def post():
-    model = load('resources/model.joblib')
-    predict = model.predict([[features['Sepal_Length'], features['Sepal_Width'], features['Petal_Length'], features['Petal_Width']],])[0].item()
-    predict_str = ""
-    if(predict == 0):
-        predict_str = "setosa" 
-    elif(predict == 1):
-        predict_str = "versicolor"
-    else:
-        predict_str = "virginica"
+sess = rt.InferenceSession("model.onnx", providers=["CPUExecutionProvider"])
+input_name = sess.get_inputs()[0].name
+label_name = sess.get_outputs()[0].name
 
-    return {**features, 'Specie': predict_str}
+@bp.route("/", methods=['POST'])
+def predict():
+    data = request.get_json()
+    if 'features' not in data or not isinstance(data['features'], list) or len(data['features']) != 4:
+        return jsonify({'message': 'invalid features field'}), 404
+
+    data = np.array([data['features']], dtype=np.float32)
+
+    pred_onx = sess.run([label_name], {input_name: data})[0]
+    predict_str = ["setosa", "versicolor", "virginica"][pred_onx[0]]
+
+    return {'predict': predict_str}
