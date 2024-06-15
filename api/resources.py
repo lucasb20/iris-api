@@ -1,9 +1,7 @@
 from flask.views import MethodView
 from flask import Blueprint
-from joblib import load
-from schemas import IrisFeatures, IrisPredict
 
-bp = Blueprint("mlp", __name__, description="Operations on mlp")
+bp = Blueprint("mlp", __name__, __name__)
 
 @bp.route("/iris")
 class Iris(MethodView):
