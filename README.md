@@ -11,7 +11,7 @@ A Flask API consuming a neural network model.
 
 **System requirements**
 
-* Python 3.10
+* Python 3.x
 
 **Application installation**
 
@@ -21,33 +21,26 @@ A Flask API consuming a neural network model.
 
 **Screenshots**
 
-* Training the neural network.
+- Response on `POST /predict {"features":[5.1, 3.5, 1.4, 0.2]}`
 
-![Training the neural network](other/Screenshot1.png)
+```bash
+{
+	"predict": "iris-setosa"
+}
+```
 
-* Response on `POST /iris {
-	"Petal_Length": 0.2,
-	"Petal_Width": 1.4,
-	"Sepal_Length": 5.1,
-	"Sepal_Width": 3.5
-}`
+- Response on `POST /predict {"features":[7.0, 3.2, 4.7, 1.4]}`
 
-![Testing ENDPOINT /iris](other/Screenshot2.png)
+```bash
+{
+	"predict": "iris-versicolour"
+}
+```
 
-* Response on `POST /iris {
-	"Petal_Length": 4.7,
-	"Petal_Width": 1.4,
-	"Sepal_Length": 7.0,
-	"Sepal_Width": 3.2
-}`
+- Response on `POST /predict {"features":[6.3, 3.3, 6.0, 2.5]}`
 
-![Testing ENDPOINT /iris](other/Screenshot3.png)
-
-* Response on `POST /iris {
-	"Petal_Length": 6.0,
-	"Petal_Width": 1.4,
-	"Sepal_Length": 6.3,
-	"Sepal_Width": 3.3
-}`
-
-![Testing ENDPOINT /iris](other/Screenshot4.png)
+```bash
+{
+	"predict": "iris-virginica"
+}
+```
