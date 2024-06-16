@@ -1,11 +1,11 @@
-# neural-network-api
-A Flask API consuming a neural network model.
+# iris-api
+A Flask API consuming a linear model.
 
 **Description**
 
-  This is an API project in Flask used to communicate with a neural network model to classify types of flowers from the iris dataset, from the scikit-learn library, classifying into Setosa, Versicolor or Virginica.
+  This is an API project in Flask used to communicate with a linear model to classify types of flowers from the iris dataset, from the scikit-learn library, classifying into Setosa, Versicolor or Virginica.
 
-  NOTE: 'neuralnetwork' folder used to train the model. The model is a Multilayer Perceptron for classification with 100 hidden layer neurons, ReLU activation function, four input neurons and one output neuron.
+  NOTE: The model is a Logistic Regression Model with inputs sepal length, sepal width, petal length, petal width, all in cm, and returns the calculated species name.
 
 **Installation instructions**
 
@@ -33,7 +33,7 @@ A Flask API consuming a neural network model.
 
 ```bash
 {
-	"predict": "iris-versicolour"
+	"predict": "iris-versicolor"
 }
 ```
 
