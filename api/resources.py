@@ -17,6 +17,6 @@ def predict():
     data = np.array([data['features']], dtype=np.float32)
 
     pred_onx = sess.run([label_name], {input_name: data})[0]
-    predict_str = ["iris-setosa", "iris-versicolour", "iris-virginica"][pred_onx[0]]
+    predict_str = ["iris-setosa", "iris-versicolor", "iris-virginica"][pred_onx[0]]
 
     return jsonify({'predict': predict_str})
